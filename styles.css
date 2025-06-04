@@ -345,3 +345,129 @@ body {
   padding: 70px 0;
   margin-top: 30px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Добавляем это в начало styles.css */
+:root {
+  --mobile-padding: 16px;
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+  .header {
+    top: 10px;
+    padding: 10px 15px;
+    max-width: 90%;
+  }
+
+  .logo-text {
+    font-size: 14px;
+  }
+
+  .nav a {
+    margin-left: 15px;
+    font-size: 14px;
+  }
+
+  .hero-image {
+    height: 400px;
+  }
+
+  .beer-slider {
+    padding: 0 var(--mobile-padding);
+    max-width: 90%;
+  }
+
+  .beer-title, .nav-title {
+    font-size: 36px;
+  }
+
+  .parent {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    max-width: 90%;
+  }
+
+  .div1, .div2, .div3, .div4 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .nav_parent {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    max-width: 90%;
+    gap: 15px;
+  }
+
+  .div5, .div6, .div7, .div8, 
+  .div9, .div10, .div11, .div12, .div13 {
+    grid-row: auto;
+    padding: 15px 20px;
+  }
+
+  .map-box {
+    max-width: 90%;
+  }
+
+  .map-box iframe {
+    height: 300px;
+  }
+
+  .beer-button {
+    padding: 15px 30px;
+  }
+
+  .swiper {
+    padding-bottom: 20px;
+  }
+
+  .beer-card img {
+    height: 120px;
+  }
+}
+
+/* Дополнительные мелкие исправления для улучшения отображения */
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav a {
+    margin-left: 0;
+  }
+
+  .beer-title, .nav-title {
+    font-size: 28px;
+  }
+}
