@@ -1,7 +1,9 @@
 html {
+	margin: 0;
 	box-sizing: border-box;
 	font-family: Grandis Extended;
 }
+
 
 .header {
   position: fixed;
