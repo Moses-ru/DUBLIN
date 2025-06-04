@@ -4,6 +4,11 @@ html {
 	font-family: Grandis Extended;
 }
 
+body {
+	margin: 0;
+	
+}
+
 
 .header {
   position: fixed;
