@@ -1,0 +1,341 @@
+body {
+  margin: 0;
+  font-family: Grandis, sans-serif;
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 0 0 2px #000;
+  max-width: 80%; 
+  width: calc(100% - 40px);
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  
+}
+
+.logo img {
+  width: 42px;
+  height: 42px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.1;
+}
+
+.nav a {
+  margin-left: 32px;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+
+
+
+.hero-image {
+  
+  width: 100%;
+  height: 750px;
+  background-image: url('head1.png');
+  background-size: cover;        /* Заполнит блок, возможно с обрезкой */
+  background-position: center;   /* Центрирует изображение */
+  background-repeat: no-repeat;  /* Не повторяется */
+}
+
+
+
+
+.beer-slider {
+  padding: 0px 20px;
+  background: #ffffff;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  max-width: 80%;
+}
+
+.beer-title {
+  font-size: 72px;
+  
+  margin-bottom: 10px;
+}
+
+.beer-hint {
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.arrow {
+  font-size: 20px;
+}
+
+.swiper {
+  
+  padding-bottom: 40px;
+  z-index: 10;
+}
+
+.swiper-slide {
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 12px;
+  padding: 20px ;
+  
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.beer-card img {
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.beer-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.beer-card p {
+  font-size: 14px;
+  color: #333;
+  margin-top: 4px;
+}
+
+.beer-button-wrapper {
+  margin-top: 20px;
+}
+
+.beer-button {
+  background: #000;
+  color: #fff;
+  padding: 25px 54px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  
+}
+
+
+  
+
+
+.parent {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 35px;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  max-width: 80%; /* Ограничиваем ширину грида */
+  
+  padding: 10px; /* Добавляем отступы для предотвращения выхода за пределы */
+  
+  
+}
+
+.div1, .div2, .div3, .div4 {
+  
+  width: 100%;
+  height: auto;
+  overflow: hidden; /* Прячем части изображения, которые могут выходить за контейнер */
+  border-radius: 15px;
+}
+
+.div1 img, .div2 img, .div3 img, .div4 img {
+  width: 100%; /* Изображения растягиваются по ширине контейнера */
+  height: 100%; /* Высота блоков фиксирована */
+  object-fit: cover; /* Для корректного масштабирования изображений */
+}
+
+.div1 {
+  grid-row: span 2 / span 2;
+}
+
+.div2 {
+  grid-column: span 2 / span 2;
+}
+
+.div3 {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+.div4 {
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+
+
+.nav-title{
+  font-size: 72px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+
+.nav_parent {
+    display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 35px;
+  margin-top: 30px;
+  max-width: 50%; /* Ограничиваем ширину грида */
+  text-align: center;
+  padding: 10px; /* Добавляем отступы для предотвращения выхода за пределы */
+    
+}
+    
+
+
+.div5 {
+    grid-row-start: 1;
+    background: #000;
+  color: #fff;
+  padding: 25px 54px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.div6 {
+    grid-row-start: 1;
+    background: #000;
+  color: #fff;
+  padding: 25px 54px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.div7 {
+    grid-row-start: 1;
+    background: #000;
+  color: #fff;
+  padding: 25px 54px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.div8 {
+    grid-row-start: 2;
+    background: #000;
+  color: #fff;
+  padding: 25px 54px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.div9 {
+    grid-row-start: 2;
+    background: #000;
+  color: #fff;
+  padding: 25px 54px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.div10 {
+    grid-row-start: 2;
+    background: #000;
+  color: #fff;
+  padding: 25px 54px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.div11 {
+    grid-row-start: 3;
+    background: #000;
+  color: #fff;
+  padding: 25px 54px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.div12 {
+    grid-row-start: 3;
+    background: #000;
+  color: #fff;
+  padding: 25px 54px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.div13 {
+    grid-row-start: 3;
+    background: #000;
+  color: #fff;
+  padding: 25px 54px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+        
+
+
+.map-box {
+  flex: 1;       
+  border-radius: 16px;
+  padding: 2;
+  margin-top: 24px;
+  overflow: clip;
+  margin-top: 30px;
+  max-width: 80%; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.map-box iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  margin-top: 30px;
+  border-radius: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.footer{
+  background-color: #24262b;
+  padding: 70px 0;
+  margin-top: 30px;
+}
