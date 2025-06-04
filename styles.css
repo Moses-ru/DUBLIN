@@ -1,7 +1,6 @@
-body {
-  margin: 0;
-  font-family: Grandis, sans-serif;
-  box-sizing: border-box;
+html {
+	box-sizing: border-box;
+    font-family: Grandis Extended;
 }
 
 .header {
