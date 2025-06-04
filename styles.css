@@ -391,7 +391,13 @@ body {
   }
 
   .hero-image {
+  
+    width: 100%;
     height: 400px;
+    background-image: url('head_mob.png');
+    background-size: cover;        /* Заполнит блок, возможно с обрезкой */
+    background-position: center;   /* Центрирует изображение */
+    background-repeat: no-repeat;  /* Не повторяется */
   }
 
   .beer-slider {
@@ -454,6 +460,16 @@ body {
   .header {
     flex-direction: column;
     gap: 10px;
+  }
+
+  .hero-image {
+  
+    width: 100%;
+    height: 500px;
+    background-image: url('head_mob.png');
+    background-size: cover;        /* Заполнит блок, возможно с обрезкой */
+    background-position: center;   /* Центрирует изображение */
+    background-repeat: no-repeat;  /* Не повторяется */
   }
 
   .nav {
