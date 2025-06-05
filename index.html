@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Дублин Паб</title>
+
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="fonts/fonts.css" />
+  <link rel="stylesheet" href="styles_menu.css" />
   <link
     rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
 </head>
 <body>
 
@@ -28,9 +29,9 @@
       </div>
     </div>
     <nav class="nav">
-      <a href="#">Меню</a>
-      <a href="#">Акции</a>
-      <a href="#">Афиша</a>
+      <a href="menu.html">Меню</a>
+      <a href="https://vk.com/dublinpab86?from=search" target="_blank">Акции</a>
+      <a href="https://vk.com/dublinpab86?from=search" target="_blank">Афиша</a>
       <a href="#">Контакты</a>
     </nav>
 
@@ -42,9 +43,9 @@
         <span></span>
       </div>
       <nav class="mobile-nav">
-        <a href="#">Меню</a>
-        <a href="#">Акции</a>
-        <a href="#">Афиша</a>
+        <a href="menu.html">Меню</a>
+        <a href="https://vk.com/dublinpab86?from=search" target="_blank">Акции</a>
+        <a href="https://vk.com/dublinpab86?from=search" target="_blank">Афиша</a>
         <a href="#">Контакты</a>
       </nav>
     </div>
@@ -140,16 +141,83 @@
   </div>
 
   <div class="beer-button-wrapper">
-    <a href="#" class="beer-button">ПОСМОТРЕТЬ ИХ ВСЕ</a>
+    <a href="menu.html" class="beer-button" color: #fff;>ПОСМОТРЕТЬ ИХ ВСЕ</a>
   </div>
   </section>
   
-  <div class="parent">
+  <!-- <div class="parent">
  <div class="div1"><img src="photo1.png" alt="Основное фото"></div>
  <div class="div2"><img src="photo2.png" alt="Длинное"></div>
  <div class="div3"><img src="photo3.png" alt="Мини1"></div>
  <div class="div4"><img src="photo4.png" alt="Мини2"></div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Слайдшоу  -->
+
+
+
+<div class="container">
+  <div class="card">
+    <img src="photo1.png">
+    <div class="card__head">Ваш</div>
+  </div>
+  <div class="card">
+    <img src="photo2.png">
+    <div class="card__head">Любимый</div>
+  </div>
+  <div class="card">
+    <img src="photo3.png">
+    <div class="card__head">Дублин</div>
+  </div>
+  <div class="card">
+    <img src="photo4.png">
+    <div class="card__head">Паб</div>
+  </div>
+  <div class="card">
+    <img src="men.png">
+    <div class="card__head">Открылся</div>
+  </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -178,6 +246,12 @@
   <div class="container"> 
   </div>
 </footer>
+
+<div class="scroll-to-top">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 20V4M12 4L5 11M12 4L19 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -218,6 +292,49 @@
       if (!e.target.closest('.burger-menu') && burgerMenu.classList.contains('active')) {
         burgerMenu.classList.remove('active');
       }
+    });
+
+        window.addEventListener('scroll', function() {
+      const scrollToTopBtn = document.querySelector('.scroll-to-top');
+      if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('visible');
+      } else {
+        scrollToTopBtn.classList.remove('visible');
+      }
+    });
+
+    // Плавная прокрутка при клике
+    document.querySelector('.scroll-to-top').addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Обработчик для всех якорных ссылок
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          // Плавная прокрутка с учетом фиксированного header'а
+          const headerHeight = document.querySelector('.header').offsetHeight;
+          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+          
+          // Обновляем URL без перезагрузки страницы
+          history.pushState(null, null, targetId);
+        }
+      });
     });
 </script>
 
