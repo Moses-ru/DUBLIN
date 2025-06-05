@@ -56,14 +56,39 @@ body {
 }
 
 
+.pub-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
+              url('head1.png') center/cover no-repeat;
+  height: 600px;
+  padding: 2rem;
+  color: white;
+  text-align: left;
+  flex-wrap: wrap;
+}
 
+.logo_banner {
+  max-width: 150px;
+  height: 150px;
+  margin-right: 3rem;
+  flex-shrink: 0;
+  
+}
+
+.text {
+  font-size: 3vw;
+  font-weight: bold;
+  line-height: 1.2;
+  
+}
 
 .hero-image {
-  
   width: 100%;
   height: 750px;
   background-image: url('head1.png');
-  background-size: cover;        /* Заполнит блок, возможно с обрезкой */
+  background-size: cover;       /* Заполнит блок, возможно с обрезкой */
   background-position: center;   /* Центрирует изображение */
   background-repeat: no-repeat;  /* Не повторяется */
 }
@@ -368,6 +393,40 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Добавляем это в начало styles.css */
 :root {
   --mobile-padding: 16px;
@@ -383,17 +442,58 @@ body {
 
   .logo-text {
     font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
+  .logo img {
+    width: 42px;
+    height: 42px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
   .nav a {
     margin-left: 15px;
     font-size: 14px;
   }
 
+  .pub-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
+                url('head1.png') center/cover no-repeat;
+    height: 400px;
+    padding: 2rem;
+    color: white;
+    text-align: left;
+    flex-wrap: wrap;
+  }
+
+  .logo_banner {
+    margin-top: 150px;
+    max-width: 100px;
+    height: 100px;
+    margin-right: 3rem;
+    flex-shrink: 0;
+    
+  }
+
+  .text {
+    margin-top: 150px;
+    font-size: 2.5vw;
+    font-weight: bold;
+    line-height: 1.2;
+    
+  }
+
+
+
   .hero-image {
   
     width: 100%;
-    height: 400px;
+    height: 200px;
     background-image: url('head_mob.png');
     background-size: cover;        /* Заполнит блок, возможно с обрезкой */
     background-position: center;   /* Центрирует изображение */
@@ -439,7 +539,7 @@ body {
   }
 
   .map-box iframe {
-    height: 300px;
+    height: 400px;
   }
 
   .beer-button {
@@ -462,6 +562,38 @@ body {
     gap: 10px;
   }
 
+
+  .pub-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
+                url('head1.png') center/cover no-repeat;
+    height: 400px;
+    padding: 2rem;
+    color: white;
+    text-align: left;
+    flex-wrap: wrap;
+  }
+
+  .logo_banner {
+    margin-top: 150px;
+    max-width: 100px;
+    height: 100px;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    
+  }
+
+  .text {
+    margin-top: 150px;
+    font-size: 5vw;
+    font-weight: bold;
+    line-height: 1.2;
+    
+  }
+
+
   .hero-image {
   
     width: 100%;
@@ -483,7 +615,96 @@ body {
     margin-left: 0;
   }
 
+  .map-box {
+    max-width: 90%;
+  }
+
+  .map-box iframe {
+    height: 400px;
+  }
+
   .beer-title, .nav-title {
     font-size: 28px;
   }
 }
+
+
+/* Бургер-меню */
+.burger-menu {
+  display: none;
+}
+
+.burger-icon {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.burger-icon span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
+
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 30px;
+  margin-top: 5px;
+  border-radius: 18px 18px 18px 18px;
+  box-shadow: 0 0 0 2px #000;
+  z-index: 99;
+  text-align: center;
+  font-weight: bold;
+}
+
+.mobile-nav a {
+  display: block;
+  margin: 15px 0;
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+/* Анимация бургера при открытии */
+.burger-menu.active .burger-icon span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.burger-menu.active .burger-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active .burger-icon span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+  
+  .burger-menu {
+    display: block;
+  }
+  
+  .burger-menu.active .mobile-nav {
+    display: block;
+  }
+  
+  /* Чтобы шапка не прыгала при открытии меню */
+  .header {
+    align-items: center;
+  }
+}
+
