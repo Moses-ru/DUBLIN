@@ -1,0 +1,558 @@
+html {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Grandis Extended;
+  scroll-behavior: smooth;
+
+}
+
+body {
+	margin: 0;
+	
+}
+
+
+
+.header {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 0 0 2px #000;
+  max-width: 80%; 
+  width: calc(100% - 40px);
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  
+}
+
+.logo img {
+  width: 42px;
+  height: 42px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.1;
+}
+
+.nav a {
+  margin-left: 32px;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+.menu-background {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
+              url('head1.png') center/cover no-repeat;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+
+.menu-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 2;
+  min-width: 300px;
+  
+}
+
+.menu-block {
+  
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.menu-block h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.hookah-block {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hookah-block h2 {
+  font-size: 1.5rem;
+}
+
+
+
+
+
+    
+    h1 {
+      font-size: 72px;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+
+    }
+    h2 {
+        font-size: 50px;
+        margin-bottom: 10px;  
+    }
+
+
+
+    
+    .hidden-section {
+      width: 50%;
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      transform: translateY(20px);
+      transition: all 0.5s ease;
+      flex: 0 0 calc(25% - 40px);
+      grid-template-columns: repeat(4, 1fr);
+      justify-content: center;
+      text-align: center;
+    }
+
+    .grid.show-all .hidden-section {
+      opacity: 1;
+      height: auto;
+      transform: translateY(0);
+      margin-top: 30px; /* Отступ перед скрытым разделом */
+    }
+
+    .hidden-section h3.subname-title {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.5s ease 0.2s; /* Задержка для плавного появления */
+    }
+
+    .grid.show-all .hidden-section h3.subname-title {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+
+    .section {
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      min-width: 80%;
+      
+    }
+
+    .name-title{
+        font-size: 30px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .subname-title{
+        font-size: 20px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .grid-container {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      min-width: 80%;
+      margin: 0 auto;
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 1200px;
+      overflow: hidden; /* Важно для анимации */
+      transition: height 0.5s ease;
+
+    }
+
+    .grid .item.hidden {
+      display: none;
+    }
+
+    .grid .subname-title.hidden {
+      display: none;
+    }
+
+    .grid.show-all .item.hidden {
+      display: flex; /* или block, в зависимости от вашей структуры */
+    }
+
+    .grid .cock_item.hidden {
+      display: none;
+    }
+
+    .grid.show-all .cock_item.hidden {
+      display: flex; /* или block, в зависимости от вашей структуры */
+    }
+
+    .item {
+      
+      border: 2px solid black;
+      padding: 20px; /* Увеличено padding */
+      width: 100%; /* Увеличена ширина */
+      background-color: white;
+      border-radius: 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 0 0 calc(25% - 40px); /* 4 колонки с учетом gap */
+      box-sizing: border-box;
+    }
+
+    .cock_item{
+      border: 2px solid black;
+      padding: 20px; /* Увеличено padding */
+      width: 100%; /* Увеличена ширина */
+      background-color: rgb(0, 0, 0);
+      color: #fff;
+      border-radius: 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 0 0 calc(25% - 40px); /* 4 колонки с учетом gap */
+      box-sizing: border-box;
+      
+    }
+    
+
+    .item img {
+      max-width: 100%;
+      height: auto;
+      max-height: 200px;
+    }
+    .title {
+      min-width: 120px;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: auto;
+      margin-right: auto;
+      justify-items: center;
+      align-items: center;
+    }
+    .desc {
+      
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 12px;
+      margin-top: 10px;
+      color: gray;
+      text-align: center;
+    }
+    .hidden {
+      display: none;
+    }
+
+    .beer-button-wrapper {
+      margin-top: 20px;
+    }
+
+  .toggle-btn {
+    background: #000;
+    color: #fff;
+    padding: 15px 30px; /* Уменьшил padding для более компактного вида */
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+
+    margin: 30px auto; /* auto по бокам для центрирования */
+    display: block; /* Чтобы margin auto работал */
+    width: 200px; /* Фиксированная ширина */
+    text-align: center; /* Центрирование текста */
+    cursor: pointer; /* Курсор-указатель при наведении */
+    border: none; /* Убираем стандартные стили кнопки */
+  }
+
+
+
+
+
+
+
+  .scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .scroll-to-top:hover {
+    background-color: #333;
+    transform: translateY(-3px);
+  }
+
+
+
+  
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  *{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+
+
+/*Carousel Gallery*/
+.carousel-gallery{
+  margin: 50px 0;
+  padding: 0 30px;
+  .swiper-slide{
+    a{
+      display: block;
+      width: 100%;
+      height: 100px;
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+
+      -webkit-box-shadow: 3px 2px 20px 0px rgba(0,0,0, .2);
+      -moz-box-shadow: 3px 2px 20px 0px rgba(0,0,0, .2);
+      box-shadow: 3px 2px 20px 0px rgba(255, 255, 255, 0.89);
+
+      &:hover{
+        .image{
+          .overlay{opacity: 1}
+        }
+      }
+
+      .image{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+        .overlay{
+          width: 500%;
+          height: 100%;
+          background-color: rgba(20,20,20, .8);
+          text-align: center;
+          opacity: 0;
+          
+          -webkit-transition: all .2s linear; 
+          -o-transition: all .2s linear; 
+          transition: all .2s linear;
+
+          em{
+            color: #fff;
+            font-size: 26px;
+            position: relative;
+            top: 50%; 
+            -webkit-transform: translateY(-50%); 
+            -ms-transform: translateY(-50%); 
+            -o-transform: translateY(-50%); 
+            transform: translateY(-50%);
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+  .swiper-pagination{
+    position: relative;
+    bottom: auto;
+    text-align: center;
+    margin-top: 25px;
+
+    .swiper-pagination-bullet{
+      -webkit-transition: all .2s linear; 
+      -o-transition: all .2s linear; 
+      transition: all .2s linear;
+
+      &:hover{
+        opacity: .7;
+      }
+
+      &.swiper-pagination-bullet-active{
+        background-color: #3ed630;
+        transform: scale(1.1, 1.1)
+      }
+    }
+  }
+}
+/*# Carousel Gallery*/
+
+.plugins{
+  text-align: center;
+  
+  h3{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    text-transform: uppercase;
+    color: #111;
+  }
+  
+  a{
+    display: inline-block;
+    font-family: Arial;
+    color: #777;
+    font-size: 14px;
+    margin: 10px;
+    transition: all .2s linear;
+    
+    &:hover{color: #35d630}
+  }
+}
